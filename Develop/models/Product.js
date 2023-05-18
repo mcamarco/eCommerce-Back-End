@@ -16,10 +16,10 @@ Product.init(
       primaryKey: true,
       autoIncrement: true
     },
-    name: {
+    product_name: {
       type: dataTypes.STRING,
       allowNull: false,
-    }, 
+    },
     price: {
       type: dataTypes.DECIMAL,
       allowNull: false,
@@ -28,8 +28,12 @@ Product.init(
     stock: {
       type: dataTypes.INTEGER,
       allowNull: false,
-      // TODO: defaul value of 10
+      // TODO: default value of 10
       // todo validates numeric
+    },
+    category_id: {
+      type: dataTypes.INTEGER,
+      // todo reference the category model's id
     }
 
   },
@@ -43,3 +47,7 @@ Product.init(
 );
 
 module.exports = Product;
+
+// Product belongs to Category, and Category has many Product models, as a category can have multiple products but a product can only belong to one category.
+
+// Product belongs to many Tag models, and Tag belongs to many Product models. Allow products to have multiple tags and tags to have many products by using the ProductTag through model.

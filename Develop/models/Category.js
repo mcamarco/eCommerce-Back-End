@@ -9,7 +9,7 @@ Category.init(
     // define columns
     id: {
       // Integer
-      type: dataTypes.INTEGER,
+      type: DataTypes.INTEGER,
       // Doesn't allow null values.
       allowNull: false,
       // Set as primary key.
@@ -18,7 +18,7 @@ Category.init(
       autoIncrement: true
     },
    category_name: {
-      type: dataTypes.STRING,
+      type: DataTypes.STRING,
       // Doesn't allow null values.
       allowNull: false,
       // Set as primary key.
